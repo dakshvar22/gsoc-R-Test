@@ -38,6 +38,22 @@ getDTM <- function(trainPath)
   return(mat)
 }
 
+getMostFrequent <- function(dtMat,number)
+{
+  ### Function to get the most frequent occuring words in the training corpus
+  
+  # Get the frequency of each term
+  freq <- colSums(as.matrix(dtMat))
+  
+  #create sort order (desc)
+  frequent <- order(freq,decreasing=TRUE)
+  
+  frequent<- frequent[1:number]
+  return(freq[frequent])
+
+}
+
+
 genWordCloud <- function(dtMat,minFreq)
 {
   ### Function to generate a wordcloud of the terms found in the documents using the 'wordcloud' package.

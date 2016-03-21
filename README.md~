@@ -22,6 +22,4 @@ As the test was to code any function which would be anyhow related to the projec
 
 As output it simply returns the DocumentTermMatrix Object.
 
-Next function is a simple utility function to get the most frequently occuring words individually. It takes as input the document term matrix and number of words to be returned. This function can be improved by considering words of greater than a specific length only. This might be useful in cases where words like "can" and "one"  give us no information about the subject matter of the documents in which they occur.
-
 In addition to it, I also wrote a function which would also visualize the set of terms found in the training corpus in form of a word cloud. It takes as input the document term matrix got as output of the previous function and a mininmum threshold value on the frequency of each term.
